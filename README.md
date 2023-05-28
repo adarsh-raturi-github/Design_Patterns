@@ -1,6 +1,6 @@
 # Design_Patterns
 
-All these are examples of Head first design Patterns implemented in Typescript
+All these are examples of Head first design Patterns adapt them from java to Typescript
 
 (New pattern will be included in each week)
 
