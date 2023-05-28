@@ -1,6 +1,8 @@
 # Design_Patterns
 
-All these are examples of Head first design Patterns implemented in ts
+All these are examples of Head first design Patterns implemented in Typescript
+
+(New pattern will be included in each week)
 
 To run this example you need to install Typescript and ts-node
 
