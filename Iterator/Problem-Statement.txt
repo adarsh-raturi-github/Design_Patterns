@@ -1,0 +1,19 @@
+Let a person X buy Three Restaurants and merge them to one
+1.Diner House
+2.Pancake-House
+3.Seven-Hills
+
+All three restaurants owners have agreed that they can have similar structure for menu item(name,price,description,isVegetarian)
+
+But problem is that they have implemented their menu using different data structures
+1.Diner House (Array)
+2.Pancake-House(Linked List)
+3.Seven-Hills(Map)
+
+Now person X asked you to create a application for waiter that will show menu for all these restaurants together.
+
+You think of iterator pattern becoz different data structure have different traversal ways and also we dont want waiter to know about the,
+implementation of various menus.
+
+For further reference plz check "Head First Design Pattern" book
+
