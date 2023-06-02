@@ -1,6 +1,6 @@
 # Design_Patterns
 
-All these are examples of Head first design Patterns adapt them from java to Typescript
+All these are examples of Head first design Patterns adapted  from java to Typescript
 
 (New pattern will be included in each week)
 
@@ -10,7 +10,7 @@ To run this example you need to install Typescript and ts-node
 
 2.npm i ts-node 
 
-To run a particular just go to that design pattern using cd command
+To run a particular pattern just go to that design pattern using cd command
 
 Run following command in terminal
 

@@ -3,7 +3,7 @@ import { MenuItem } from "../menu-item";
 import { Menu } from "../interfaces/menu";
 
 export class DinerHouseMenu implements Menu {
-  //max size 5 menu items
+  //max size 3 menu items
   menuItems = new Array<MenuItem>(3);
 
   constructor() {
