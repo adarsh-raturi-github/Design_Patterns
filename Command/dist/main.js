@@ -33,11 +33,12 @@ class Main {
         this.remoteControl.undoButtonPressed();
         //stero will be on
         this.remoteControl.onButtonPress(3);
-        //fan will be on
+        //fan will be on and put  on high speed
         this.remoteControl.onButtonPress(4);
         // fan will be off becoz undo pressed
         this.remoteControl.undoButtonPressed();
         console.log("-----------Party Mode --------------------");
+        //change to slot 4 commands
         this.remoteControl.setCommand(4, new Macro_1.MacroCommand([
             new Lights_1.LightOnCommand(gardenLight),
             new Stereo_1.StereoOnCommand(stereo),
@@ -48,6 +49,12 @@ class Main {
         this.remoteControl.undoButtonPressed();
     }
     _assignSlotsToDevices(kitchenLight, gardenLight, stereo, fan) {
+        /*
+        slot-1 Kitchen light
+        slot-2 garden light
+        slot-3 Stereo
+        slot-4 Fan
+        */
         this.remoteControl.setCommand(1, new Lights_1.LightOnCommand(kitchenLight), new Lights_1.LightOffCommand(kitchenLight));
         this.remoteControl.setCommand(2, new Lights_1.LightOnCommand(gardenLight), new Lights_1.LightOffCommand(gardenLight));
         this.remoteControl.setCommand(3, new Stereo_1.StereoOnCommand(stereo), new Stereo_1.StereoOffCommand(stereo));
