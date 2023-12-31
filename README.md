@@ -1,8 +1,7 @@
 # Design_Patterns
 
-All these are examples of Head first design Patterns adapted  from java to Typescript (alos have small description about problem in Problem-Statement.txt in each folder)
+All these are examples of Head first design Patterns adapted  from java to Typescript (also have small description about problem in Problem-Statement.txt in each folder)
 
-(New pattern will be included in each week)
 
 To run these examples you need to install Typescript and ts-node
 
