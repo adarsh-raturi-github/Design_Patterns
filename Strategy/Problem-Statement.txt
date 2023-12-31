@@ -1,0 +1,7 @@
+Requirement 
+1.Client asked our team to make a duck game for children which show different ducks and their fly and quack behaviour
+and also can change their behaviour at runtime.
+
+2.You think of strategy pattern as this allow set of algorithms to use interchangeable from client that used it.
+
+For further reference plz check "Head First Design Pattern" book.
