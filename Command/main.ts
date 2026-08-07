@@ -2,7 +2,11 @@ import { FanHighCommand } from "./src/Commands/Fan/fan-high.command";
 import { FanOffCommand } from "./src/Commands/Fan/fan-off.command";
 import { LightOffCommand, LightOnCommand } from "./src/Commands/Lights";
 import { MacroCommand } from "./src/Commands/Macro";
-import { StereoOnCommand, StereoOffCommand } from "./src/Commands/Stereo";
+import {
+  StereoOnCommand,
+  StereoOffCommand,
+  StereoVolChangeCommand,
+} from "./src/Commands/Stereo";
 import { RemoteControl } from "./src/RemoteControl";
 import { HarmanStereo } from "./src/Vendors/Harman-Stereo/harman-stereo";
 import { HavellsFan } from "./src/Vendors/Havells-Fan/havells-fan";
@@ -45,11 +49,24 @@ class Main {
         new LightOnCommand(gardenLight),
         new StereoOnCommand(stereo),
       ]),
-      new FanOffCommand(fan)
+      new FanOffCommand(fan),
     );
     //party mode started
+
     this.remoteControl.onButtonPress(4);
+
     console.log("----------------Party Mode off-------------");
+
+    console.log("----------------Volumne Change-------------");
+    /// volume change
+    this.remoteControl.setCommand(
+      3,
+      new StereoOnCommand(stereo),
+      new StereoVolChangeCommand(stereo, 15),
+    );
+
+    //set volume to 15 of stereo
+    this.remoteControl.offButtonPress(3);
     this.remoteControl.undoButtonPressed();
   }
 
@@ -57,7 +74,7 @@ class Main {
     kitchenLight: HitachiLight,
     gardenLight: HitachiLight,
     stereo: HarmanStereo,
-    fan: HavellsFan
+    fan: HavellsFan,
   ) {
     /*
     slot-1 Kitchen light
@@ -68,22 +85,22 @@ class Main {
     this.remoteControl.setCommand(
       1,
       new LightOnCommand(kitchenLight),
-      new LightOffCommand(kitchenLight)
+      new LightOffCommand(kitchenLight),
     );
     this.remoteControl.setCommand(
       2,
       new LightOnCommand(gardenLight),
-      new LightOffCommand(gardenLight)
+      new LightOffCommand(gardenLight),
     );
     this.remoteControl.setCommand(
       3,
       new StereoOnCommand(stereo),
-      new StereoOffCommand(stereo)
+      new StereoOffCommand(stereo),
     );
     this.remoteControl.setCommand(
       4,
       new FanHighCommand(fan),
-      new FanOffCommand(fan)
+      new FanOffCommand(fan),
     );
   }
 }
