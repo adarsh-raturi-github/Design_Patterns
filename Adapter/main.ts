@@ -1,6 +1,6 @@
 import { TurkeyAdapter } from "./src/implementations/adapters/turkey.adapter";
-import { MallardDuck } from "./src/implementations/ducks/Mallard.duck";
-import { BlueTurkey } from "./src/implementations/turkeys/blue.turkey";
+import { MallardDuck } from "./src/implementations/ducks/mallard-duck";
+import { BlueTurkey } from "./src/implementations/turkeys/blue-turkey";
 import { IDuck, ITurkey } from "./src/interfaces";
 
 export default class Main {
